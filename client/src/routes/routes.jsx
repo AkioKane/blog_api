@@ -1,4 +1,5 @@
 import App from "./App";
+import Home from "./Home";
 
 const routes = [
   {
@@ -8,7 +9,7 @@ const routes = [
     children: [
       {
         path: "/",
-        element: null
+        element: <Home />
       }
     ]
   }

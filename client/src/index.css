@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg: #000;
+  --main-gradient-color: #028090;
+}
+
+body {
+  background-color: var(--main-bg);
+}
