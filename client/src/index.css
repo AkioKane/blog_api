@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/static/Inter_18pt-Medium.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +12,12 @@
 :root {
   --main-bg: #000;
   --main-gradient-color: #028090;
+  --header-height: 80px;
+  --content-height: calc(100vh - var(--header-height));
 }
 
 body {
   background-color: var(--main-bg);
+  color: white;
+  font-family: "Inter", sans-serif;
 }
