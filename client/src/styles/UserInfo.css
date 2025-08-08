@@ -1,0 +1,51 @@
+.sign-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 180px;
+  background-color: var(--header-bg);
+  border-radius: 30px;
+  border-color: #80b918;
+  padding: 0.5em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  gap: 0.5em;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.sign-container button {
+  position: absolute;
+  top: 0;
+  border: none;
+  height: 100%;
+  width: 55%;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 30px;
+  border-color: #80b918;
+  background: transparent;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  font-family: "Inter";
+}
+
+.sign-container button span {
+  z-index: 3;
+  color: white;
+}
+
+.sign-container .sign-in {
+  left: 0;
+}
+
+.sign-container .sign-up {
+  right: 0;
+  /* border: 2px solid #80b918; */
+}
+
+.sign-container .sign-in:hover {
+  /* border: 2px solid #80b918; */
+}

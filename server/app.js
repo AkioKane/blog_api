@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const indexRouter = require("./routes/indexRouter");
+const postsRouter = require("./routes/postsRouter");
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(cors({
 }));
 
 app.use("/api", indexRouter);
+app.use("/api/posts", postsRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {
