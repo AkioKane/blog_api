@@ -25,7 +25,7 @@ function UserInfo() {
                 setHoverElement(false);
               }}
               style={{
-                border: hoverElement ? "2px solid #80b918" : "none",
+                border: hoverElement ? "2px solid var(--header-border-bg)" : "none",
                 zIndex: hoverElement ? "2" : "1"
               }}
             >
@@ -38,7 +38,7 @@ function UserInfo() {
             <button 
               className="sign-up"
               style={{
-                border: hoverElement ? "none" : "2px solid #80b918",
+                border: hoverElement ? "none" : "2px solid var(--header-border-bg)",
               }}
             >
               <span>Sign Up</span>

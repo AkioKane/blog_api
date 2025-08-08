@@ -14,7 +14,8 @@ header .navigation {
   height: 48px;
   background-color: var(--header-bg);
   border-radius: 30px;
-  border-color: #80b918;
+  border-color: var(--header-border-bg);
+  border-width: 2px;
   padding: 0.5em;
   padding-left: 1.25em;
   padding-right: 1.25em;

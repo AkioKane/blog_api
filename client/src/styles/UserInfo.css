@@ -25,10 +25,10 @@
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 30px;
-  border-color: #80b918;
+  border-color: var(--header-border-bg);
   background: transparent;
   z-index: 1;
-  transition: all 0.2s ease-in-out;
+  transition: border 0.1s ease-in-out;
   font-family: "Inter";
 }
 
