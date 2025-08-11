@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import icon from "../assets/blog.svg";
-import "../styles/Header.css";
 import UserInfo from "./UserInfo";
+import "../styles/Header.css";
 
 function Header() {
   return (

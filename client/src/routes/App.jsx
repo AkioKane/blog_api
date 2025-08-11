@@ -4,13 +4,14 @@ import Header from '../components/Header';
 import '../styles/App.css';
 
 function App() {
+  const [data, setData] = useState([]);
 
   return (
     <>
       <div className="main">
         <Header />
 
-        <Outlet context={{  }} />
+        <Outlet context={{ data }} />
       </div>
     </>
   );
