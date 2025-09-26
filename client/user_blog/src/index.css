@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "SUSE";
+  src: url("./fonts/SUSE_Mono/SUSEMono-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --home-height: calc(100vh - 2em);
+  --home-bg: #FFF7ED;
+  --home-section-bg: #09090B;
+}
+
+.lightTheme {
+  background-color: #d9d9d9;
+}
+
+.darkTheme {
+  /* background-color: #000; */
+}

@@ -1,0 +1,11 @@
+.homeContainer {
+  width: clamp(600px, 1100px, 1200px);
+  min-width: 600px;
+  margin: 3em clamp(3em, 5%, 4em) 3em clamp(3em, 5%, 4em);
+  background-color: var(--home-bg);
+  border-radius: 20px;
+}
+
+.heroContainer {}
+
+.blackSection {}

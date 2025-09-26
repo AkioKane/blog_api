@@ -1,17 +1,23 @@
-import Header from '../components/Header';
 import { Outlet } from 'react-router';
-import './App.module.css';
+import { useAppContext } from '../context/AppContext';
+import styles from './App.module.css';
 
-const App: React.FC = () => {
+interface AppProps {}
+
+const App: React.FC<AppProps> = () => {
+  const { theme } = useAppContext();
+
   return (
     <>
-      <div className="main">
-        <Header />
-
-        <Outlet context={{  }} />
+      <div
+        className={`${styles.main} ${
+          theme === "light" ? styles.lightTheme : styles.darkTheme
+        }`}
+      >
+        <Outlet context={{ theme }} />
       </div>
     </>
-  )
+  );
 }
 
 export default App;
