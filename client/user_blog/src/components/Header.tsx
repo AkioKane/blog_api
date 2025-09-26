@@ -14,9 +14,15 @@ const HeaderHome: React.FC<HeaderHomeProps> = () => {
   return (
     <>
       <div className={styles.headerHomeContainer}>
-        <div className={styles.logo}></div>
+        <div className={styles.logo}>
+          <h1>Blog API</h1>
+        </div>
 
-        <div className={styles.navigation}></div>
+        <nav className={styles.navigation}>
+          <div className={styles.elementNav}></div>
+          <div className={styles.elementNav}></div>
+          <div className={styles.elementNav}></div>
+        </nav>
 
         <div className={styles.loginContainer}></div>
       </div>
