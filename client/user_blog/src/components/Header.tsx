@@ -80,7 +80,7 @@ const HeaderHome: React.FC<HeaderHomeProps> = () => {
             <img src={arrow} alt="arrow" />
           </Link>
           <button className={styles.loginBtn}>
-            Log In
+            <Link to={"/log-in"}>Log In</Link>
           </button>
         </div>
       </div>
