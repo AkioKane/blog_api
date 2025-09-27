@@ -4,6 +4,7 @@
   margin: 3em clamp(3em, 5%, 4em) 3em clamp(3em, 5%, 4em);
   background-color: var(--home-bg);
   border-radius: 20px;
+  animation: startPage 0.5s cubic-bezier(.05,.96,.96,1) forwards;
 }
 
 .heroContainer {}
@@ -25,5 +26,17 @@
 @media (max-width: 599px) {
   .homeContainer {
     padding: 15px;
+  }
+}
+
+@keyframes startPage {
+  0% {
+    opacity: 0.5;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
