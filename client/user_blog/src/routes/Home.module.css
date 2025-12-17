@@ -9,6 +9,38 @@
 
 .heroContainer {}
 
+.heroContainer .scrollContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: #373737;
+  padding: 50px;
+  animation: fadeIn 2.25s ease-in-out infinite forwards;
+}
+
+.heroContainer .scrollContainer h3 {
+  height: 20px;
+  left: 0px;
+  top: 36px;
+  font-family: 'SUSE';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #373737;
+}
+
+.heroContainer .scrollContainer img {
+  left: 25%;
+  right: 25%;
+  top: 23.33%;
+  bottom: 20.83%;
+}
+
 .blackSection {}
 
 @media (min-width: 1200px) {
@@ -38,5 +70,26 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
   }
 }
