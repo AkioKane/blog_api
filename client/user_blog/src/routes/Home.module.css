@@ -1,10 +1,14 @@
 .homeContainer {
+  display: flex;
+  flex-direction: column;
   width: clamp(600px, 1100px, 1200px);
   min-width: 600px;
   margin: 3em clamp(3em, 5%, 4em) 3em clamp(3em, 5%, 4em);
   background-color: var(--home-bg);
   border-radius: 20px;
-  animation: startPage 0.5s cubic-bezier(.05,.96,.96,1) forwards;
+  animation: startPage 0.5s cubic-bezier(.05, .96, .96, 1) forwards;
+  box-shadow: 0px 0px 5px 10px rgba(217, 217, 217, 0.25);
+  gap: 50px;
 }
 
 .heroContainer {}
@@ -15,7 +19,6 @@
   align-items: center;
   text-transform: uppercase;
   color: #373737;
-  padding: 50px;
   animation: fadeIn 2.25s ease-in-out infinite forwards;
 }
 
@@ -39,6 +42,57 @@
   right: 25%;
   top: 23.33%;
   bottom: 20.83%;
+}
+
+.heroContainer .welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.heroContainer .welcomeContainer h1 {
+  width: 800px;
+  height: 150px;
+  font-family: 'SUSE Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.heroContainer .welcomeContainer span {
+  width: 537px;
+  height: 80px;
+  font-family: 'SUSE Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #373737;
+  margin-bottom: 0.25em;
+}
+
+.heroContainer .welcomeContainer button {
+  width: 200px;
+  height: 50px;
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-family: 'SUSE Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
 }
 
 .blackSection {}

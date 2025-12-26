@@ -3,6 +3,10 @@
   src: url("./fonts/SUSE_Mono/SUSEMono-VariableFont_wght.ttf");
 }
 
+@font-face {
+  font-family: "SUSE Mono";
+  src: url("./fonts/SUSE_Mono/SUSEMono-VariableFont_wght.ttf");
+}
 * {
   margin: 0;
   padding: 0;

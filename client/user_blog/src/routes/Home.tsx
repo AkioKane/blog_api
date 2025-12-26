@@ -1,6 +1,7 @@
 import type React from 'react';
 import { HeaderHome } from '../components/Header';
 import scrollArrow from "../assets/scrollArrow.svg";
+import data from "../data/home.json";
 import styles from './Home.module.css';
 
 interface HomeProps {}
@@ -16,6 +17,12 @@ const Home: React.FC<HomeProps> = () => {
             <img src={scrollArrow} alt="scroll" />
 
             <h3>scroll down</h3>
+          </div>
+
+          <div className={styles.welcomeContainer}>
+            <h1>{data.title}</h1>
+            <span>{data.about}</span>
+            <button>{data.btnBlog}</button>
           </div>
         </div>
 
