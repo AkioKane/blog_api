@@ -3,6 +3,7 @@ import { HeaderHome } from '../components/Header';
 import scrollArrow from "../assets/scrollArrow.svg";
 import data from "../data/home.json";
 import styles from './Home.module.css';
+import StarButton from '../components/StarButton';
 
 interface HomeProps {}
 
@@ -21,8 +22,8 @@ const Home: React.FC<HomeProps> = () => {
 
           <div className={styles.welcomeContainer}>
             <h1>{data.title}</h1>
-            <span>{data.about}</span>
-            <button>{data.btnBlog}</button>
+            <span className={styles.aboutSpan}>{data.about}</span>
+            <StarButton text={data.btnBlog} />
           </div>
         </div>
 

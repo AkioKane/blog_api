@@ -1,0 +1,72 @@
+.sparkle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 300;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  outline: 3px solid #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  /* Убираем overflow здесь, если хотим, чтобы кнопка могла "светиться" снаружи */
+}
+
+.sparkle-button:hover {
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.button-content {
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+  letter-spacing: 2px;
+}
+
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden; 
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-up-circles ease-in forwards;
+
+  box-shadow: 
+    0 0 4px #fff,
+    0 0 8px #fff,
+    0 0 15px #fff;
+  filter: blur(0.3px);
+}
+
+@keyframes float-up-circles {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px) translateX(10px) scale(1.2);
+    opacity: 0;
+  }
+}

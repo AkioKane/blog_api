@@ -18,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
+  user-select: none;
   color: #373737;
   animation: fadeIn 2.25s ease-in-out infinite forwards;
 }
@@ -66,7 +67,7 @@
   text-transform: uppercase;
 }
 
-.heroContainer .welcomeContainer span {
+.heroContainer .welcomeContainer .aboutSpan {
   width: 537px;
   height: 80px;
   font-family: 'SUSE Mono';
@@ -82,17 +83,26 @@
 }
 
 .heroContainer .welcomeContainer button {
-  width: 200px;
-  height: 50px;
+  width: 225px;
+  height: 55px;
   background: #000000;
   color: #FFFFFF;
   border-radius: 5px;
   font-family: 'SUSE Mono';
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 18px;
   line-height: 25px;
   text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.heroContainer .welcomeContainer button:hover {
+  transform: scale(1.025);
+  border: 3px solid #000;
+  outline: 3px solid #000;
 }
 
 .blackSection {}
