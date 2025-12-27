@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = () => {
           <div className={styles.scrollContainer}>
             <img src={scrollArrow} alt="scroll" />
 
-            <h3>scroll down</h3>
+            <h3>{data.scroll}</h3>
           </div>
 
           <div className={styles.welcomeContainer}>
@@ -27,7 +27,9 @@ const Home: React.FC<HomeProps> = () => {
           </div>
         </div>
 
-        <div className={styles.blackSection}></div>
+        <div className={styles.blackSection}>
+          
+        </div>
       </div>
     </>
   );

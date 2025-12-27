@@ -20,6 +20,7 @@
   text-transform: uppercase;
   user-select: none;
   color: #373737;
+  margin-bottom: 30px;
   animation: fadeIn 2.25s ease-in-out infinite forwards;
 }
 
@@ -97,6 +98,7 @@
   cursor: pointer;
   user-select: none;
   transition: all 0.3s ease-in-out;
+  margin-top: 0.5em;
 }
 
 .heroContainer .welcomeContainer button:hover {
@@ -105,23 +107,32 @@
   outline: 3px solid #000;
 }
 
-.blackSection {}
+.blackSection {
+  flex: 1;
+  padding: 50px;
+  background: #09090B;
+  box-shadow: inset 0px 5px 20px rgba(255, 247, 237, 0.45);
+  border-radius: 0px 0px 20px 20px;
+}
 
 @media (min-width: 1200px) {
-  .homeContainer {
-    padding: 50px;
+  .homeContainer .heroContainer {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
-  .homeContainer {
-    padding: 25px;
+  .homeContainer .heroContainer {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
 @media (max-width: 599px) {
-  .homeContainer {
-    padding: 15px;
+  .homeContainer .heroContainer {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 

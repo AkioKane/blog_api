@@ -73,3 +73,24 @@
   width: 100%;
   height: 100%;
 }
+
+@media (min-width: 1200px) {
+  .headerHomeContainer {
+    padding: 50px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .headerHomeContainer {
+    padding: 25px;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .headerHomeContainer {
+    padding: 15px;
+    padding-bottom: 0;
+  }
+}
