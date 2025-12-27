@@ -1,18 +1,18 @@
 import type React from 'react';
 import { HeaderHome } from '../components/Header';
+import StarButton from '../components/StarButton';
 import scrollArrow from "../assets/scrollArrow.svg";
 import data from "../data/home.json";
-import styles from './Home.module.css';
-import StarButton from '../components/StarButton';
+import styles from './HomePreview.module.css';
 
-interface HomeProps {}
+interface HomePreviewProps { }
 
-const Home: React.FC<HomeProps> = () => {
+const HomePreview: React.FC<HomePreviewProps> = () => {
   return (
     <>
       <div className={styles.homeContainer}>
         <HeaderHome />
-        
+
         <div className={styles.heroContainer}>
           <div className={styles.scrollContainer}>
             <img src={scrollArrow} alt="scroll" />
@@ -23,16 +23,21 @@ const Home: React.FC<HomeProps> = () => {
           <div className={styles.welcomeContainer}>
             <h1>{data.title}</h1>
             <span className={styles.aboutSpan}>{data.about}</span>
+
             <StarButton text={data.btnBlog} />
           </div>
         </div>
 
         <div className={styles.blackSection}>
-          
+          <div className={styles.userContainer}></div>
+
+          <div className={styles.aboutContainer}></div>
+
+          <div className={styles.postsContainer}></div>
         </div>
       </div>
     </>
   );
 };
 
-export default Home;
+export default HomePreview;

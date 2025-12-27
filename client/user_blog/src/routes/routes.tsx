@@ -1,6 +1,6 @@
 import App from "./App";
 import ErrorPage from "./ErrorPage";
-import Home from "./Home";
+import HomePreview from "./HomePreview";
 
 const routes = [
   {
@@ -10,7 +10,7 @@ const routes = [
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <HomePreview />
       }
     ]
   }
