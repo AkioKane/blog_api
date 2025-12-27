@@ -1,17 +1,30 @@
 import type React from "react";
-import { HeaderHome } from "../components/Header";
-import StarButton from "../components/StarButton";
+import { HeaderHome } from "./Header";
+import { Link } from "react-router";
+import StarButton from "./StarButton";
 import scrollArrow from "../assets/scrollArrow.svg";
 import avatar from "../assets/avatar.jfif";
 import data from "../data/home.json";
 import styles from "./HomePreview.module.css";
 
-interface HomePreviewProps {}
+interface HomePreviewProps {
+  setHome: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const HomePreview: React.FC<HomePreviewProps> = () => {
+const HomePreview: React.FC<HomePreviewProps> = ({ setHome }) => {
+  const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
+    // +-100 scroll units
+
+    if (event.deltaY < 0) {
+      setHome(true);
+    } else if (event.deltaY > 0) {
+      setHome(false);
+    }
+  };
+
   return (
     <>
-      <div className={styles.homeContainer}>
+      <div onWheel={handleWheel} className={styles.homeContainer}>
         <HeaderHome />
 
         <div className={styles.heroContainer}>
@@ -25,7 +38,9 @@ const HomePreview: React.FC<HomePreviewProps> = () => {
             <h1>{data.title}</h1>
             <span className={styles.aboutSpan}>{data.about}</span>
 
-            <StarButton text={data.btnBlog} />
+            <Link to={"#"}>
+              <StarButton text={data.btnBlog} />
+            </Link>
           </div>
         </div>
 
