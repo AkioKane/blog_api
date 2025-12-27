@@ -2,5 +2,8 @@
   "title": "welcome to my blog.",
   "about": "This project was created solely for practice purposes, as a pet project.",
   "btnBlog": "show blog",
-  "scroll": "scroll down"
+  "scroll": "scroll down",
+  "user": "Akio",
+  "aboutMe": "Hi, my name is Artem. I don't know why I need a blog, but let it be. This project was created for my portfolio. Here I practice my skills in creating cool frontend and backend.",
+  "postsHead": "Latest posts"
 }
