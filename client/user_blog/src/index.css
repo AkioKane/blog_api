@@ -7,12 +7,14 @@
   font-family: "SUSE Mono";
   src: url("./fonts/SUSE_Mono/SUSEMono-VariableFont_wght.ttf");
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "SUSE", sans-serif;
   font-weight: 300;
+  scroll-behavior: smooth;
 }
 
 a {

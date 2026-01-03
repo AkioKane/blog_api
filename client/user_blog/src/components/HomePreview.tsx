@@ -6,25 +6,36 @@ import scrollArrow from "../assets/scrollArrow.svg";
 import avatar from "../assets/avatar.jfif";
 import data from "../data/home.json";
 import styles from "./HomePreview.module.css";
+import { useState } from "react";
 
 interface HomePreviewProps {
   setHome: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const HomePreview: React.FC<HomePreviewProps> = ({ setHome }) => {
+  const [animation, setAnimation] = useState(false);
+
   const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
     // +-100 scroll units
 
+    if (animation) return;
+
     if (event.deltaY < 0) {
-      setHome(true);
+      setAnimation(false);
+      setTimeout(() => {
+        setHome(true);
+      }, 500);
     } else if (event.deltaY > 0) {
-      setHome(false);
+      setAnimation(true);
+      setTimeout(() => {
+        setHome(false);
+      }, 500);
     }
   };
 
   return (
     <>
-      <div onWheel={handleWheel} className={styles.homeContainer}>
+      <div onWheel={handleWheel} className={`${styles.homeContainer} ${animation && styles.closeTab}`}>
         <HeaderHome />
 
         <div className={styles.heroContainer}>

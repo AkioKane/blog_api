@@ -8,6 +8,8 @@
   border-radius: 20px;
   animation: startPage 0.5s cubic-bezier(.05, .96, .96, 1) forwards;
   box-shadow: 0px 0px 5px 10px rgba(217, 217, 217, 0.25);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: center center;
   gap: 50px;
 }
 
@@ -165,6 +167,10 @@
 
 .blackSection .postsContainer .postsItems {}
 
+.closeTab {
+  animation: portalOut 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
 @media (min-width: 1200px) {
   .homeContainer .heroContainer {
     padding-left: 50px;
@@ -215,6 +221,20 @@
   }
 
   100% {
+    opacity: 0;
+  }
+}
+
+@keyframes portalOut {
+  0% {
+    transform: scale(1);
+    filter: blur(0px) brightness(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5); 
+    filter: blur(15px) brightness(1.5);
     opacity: 0;
   }
 }
