@@ -6,7 +6,7 @@ import scrollArrow from "../assets/scrollArrow.svg";
 import avatar from "../assets/avatar.jfif";
 import data from "../data/home.json";
 import styles from "./HomePreview.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface HomePreviewProps {
   setHome: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,21 +14,26 @@ interface HomePreviewProps {
 
 const HomePreview: React.FC<HomePreviewProps> = ({ setHome }) => {
   const [animation, setAnimation] = useState(false);
+  const isTransitioning = useRef(false);
 
   const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
     // +-100 scroll units
 
-    if (animation) return;
+    if (isTransitioning.current) return;
 
-    if (event.deltaY < 0) {
-      setAnimation(false);
-      setTimeout(() => {
-        setHome(true);
-      }, 500);
-    } else if (event.deltaY > 0) {
+    if (event.deltaY > 0) {
+      isTransitioning.current = true;
       setAnimation(true);
+
       setTimeout(() => {
         setHome(false);
+      }, 500);
+
+    } else if (event.deltaY < 0) {
+      isTransitioning.current = true;
+
+      setTimeout(() => {
+        isTransitioning.current = false;
       }, 500);
     }
   };

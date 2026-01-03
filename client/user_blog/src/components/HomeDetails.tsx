@@ -20,9 +20,8 @@ const HomeDetails: React.FC<HomeDetailsProps> = ({ setHome }) => {
     if (isLocked) return;
 
     if (event.deltaY < 0) {
-      setTimeout(() => {
-        setHome(true);
-      }, 500);
+      setIsLocked(true);
+      setHome(true);
     } else if (event.deltaY > 0) {
       setTimeout(() => {
         setHome(false);
